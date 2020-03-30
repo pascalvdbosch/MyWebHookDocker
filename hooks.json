@@ -2,6 +2,7 @@
     {
       "id": "mahook",
       "execute-command": "uname",
+      "response-message": "Het werkt!",
       "command-working-directory": "/"
     }
 ]
