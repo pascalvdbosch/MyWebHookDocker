@@ -10,6 +10,7 @@ RUN go build --ldflags '-s -extldflags "-static"' -i -o webhook github.com/adnan
 FROM alpine
 RUN apk add --no-cache bash coreutils curl jq
 COPY --from=build /go/bin/webhook /usr/local/bin/
+COPY hooks.json /etc/webhook/
 WORKDIR /etc/webhook
 VOLUME /etc/webhook
 EXPOSE 9000
